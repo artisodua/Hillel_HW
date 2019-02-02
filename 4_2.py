@@ -19,10 +19,17 @@
 # N представляет собой целое число в диапазоне [1..2,147,483,647].
 
 
-# y = 1041
-#
-# def salution(item):
-#     x = list(format(item, 'b'))
-#     return print(x)
-#
-# salution(y)
+y = 32
+
+def salution(item):
+    try:
+        b = "{0:b}".format(item)
+        for i, j in enumerate(b[::-1]):
+            if int(j) == 1:
+                max_gap = max([len(i) for i in b[::-1][i:].split('1') if i])
+                break
+    except ValueError:
+        max_gap = 0
+    return max_gap
+
+print(salution(y))
