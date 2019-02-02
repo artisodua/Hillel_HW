@@ -1,0 +1,16 @@
+{
+    "people": [
+        {
+            "name": "Lusy",
+            "phone": "111-111-11",
+            "email": ["lusy@ya.ru", "new_lusy@gmail.com"],
+            "license": true
+        },
+        {
+            "name": "Bob",
+            "phone": "666-999-00",
+            "email": ["bob@ya.ru", "new_bob@gmail.com"],
+            "license": false
+        }
+    ]
+}
