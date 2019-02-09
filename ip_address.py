@@ -12,23 +12,32 @@
 class IPAddress():
     def __init__(self, line):
         self._line = line
+        # self._ar = []
 
     def get_address(self):
+        ar = []
         for i in self._line:
-            print(i)
+            ar.append(i)
+        return ar
 
     def reverse_address(self):
+        ar = []
         for i in self._line:
             j = i.split('.')
             j.reverse()
-            print('.'.join(j))
+            ar.append('.'.join(j))
+        return ar
 
     def address_not_first(self):
+        ar = []
         for i in self._line:
             j = i.split('.')
-            print('.'.join(j[1::]))
+            ar.append('.'.join(j[1::]))
+        return ar
 
     def last_oktet(self):
+        ar = []
         for i in self._line:
             j = i.split('.')
-            print('Last otket -> {}'.format(j[-1]))
+            ar.append('Last otket -> {}'.format(j[-1]))
+        return ar

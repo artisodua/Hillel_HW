@@ -18,7 +18,7 @@ with open(mylink, 'r', encoding='utf-8') as file_input:
 
 ip = IPAddress(line)
 
-ip.get_address()
-ip.reverse_address()
-ip.address_not_first()
-ip.last_oktet()
+print(ip.get_address())
+print(ip.reverse_address())
+print(ip.address_not_first())
+print(ip.last_oktet())

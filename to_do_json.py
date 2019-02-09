@@ -7,9 +7,13 @@ class ToDoJson():
         self._link = link
 
     def read_json_file(self):
-        with open(self._link) as f:
-            input_file = json.load(f)
-        return input_file
+        try:
+            with open(self._link) as f:
+                input_file = json.load(f)
+        except FileNotFoundError:
+            print('JSON FILES NOT FOUND!!!')
+        else:
+            return input_file
 
     def write_json_file(self, data=None):
         with open('new_json.json', 'w') as f:
